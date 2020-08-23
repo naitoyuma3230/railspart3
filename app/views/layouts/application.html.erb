@@ -1,7 +1,11 @@
+<!--Views(HTML.erb)に適応されるテンプレート-->
+<!--各Viewに共通した<head>タグの内容を提供する-->
+<!--#各View固有の内容は<body>タグ内の<yield>部分に挿入される-->
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SampleApp</title>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
